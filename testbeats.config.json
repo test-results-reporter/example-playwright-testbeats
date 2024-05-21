@@ -1,0 +1,29 @@
+{
+  "project": "example-playwright-testbeats",
+  "run": "E2E Tests",
+  "api_key": "{TEST_BEATS_API_KEY}",
+  "targets": [
+    {
+      "name": "slack",
+      "inputs": {
+        "url": "{SLACK_MVP_URL}",
+        "title": "example-playwright-testbeats - E2E Tests",
+        "only_failures": true
+      },
+      "extensions": [
+        {
+          "name": "quick-chart-test-summary"
+        },
+        {
+          "name": "ci-info"
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "type": "junit",
+      "files": ["test-results/junit.xml"]
+    }
+  ]
+}
