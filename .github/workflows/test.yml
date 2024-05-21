@@ -21,7 +21,7 @@ jobs:
     - name: Run Playwright tests
       run: npx playwright test
     - run: npx testbeats@latest publish -c testbeats.config.json
-        if: always()
-        env:
-          TEST_BEATS_API_KEY: ${{ secrets.TEST_BEATS_API_KEY }}
-          SLACK_MVP_URL: ${{ secrets.SLACK_MVP_URL }}
+      if: always()
+      env:
+        TEST_BEATS_API_KEY: ${{ secrets.TEST_BEATS_API_KEY }}
+        SLACK_MVP_URL: ${{ secrets.SLACK_MVP_URL }}
