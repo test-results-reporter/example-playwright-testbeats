@@ -1,6 +1,4 @@
 {
-  "project": "example-playwright-testbeats",
-  "run": "E2E Tests",
   "api_key": "{TEST_BEATS_API_KEY}",
   "targets": [
     {
@@ -9,15 +7,15 @@
         "url": "{SLACK_MVP_URL}",
         "title": "example-playwright-testbeats - E2E Tests",
         "only_failures": true
-      },
-      "extensions": [
-        {
-          "name": "quick-chart-test-summary"
-        },
-        {
-          "name": "ci-info"
-        }
-      ]
+      }
+    }
+  ],
+  "extensions": [
+    {
+      "name": "quick-chart-test-summary"
+    },
+    {
+      "name": "ci-info"
     }
   ],
   "results": [
